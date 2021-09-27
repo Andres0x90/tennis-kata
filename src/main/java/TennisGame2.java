@@ -104,27 +104,18 @@ public class TennisGame2 implements TennisGame
         }
     }
     
-    public void SetP2Score(int number){
-        
-        for (int i = 0; i < number; i++)
-        {
-            P2Score();
-        }
-            
-    }
-    
-    public void P1Score(){
+    public void addPlayer1Score(){
         player1Points++;
     }
     
-    public void P2Score(){
+    public void addPlayer2Score(){
         player2Points++;
     }
 
     public void wonPoint(String player) {
         if (player.equalsIgnoreCase(player1Name))
-            P1Score();
+            addPlayer1Score();
         if (player.equalsIgnoreCase(player2Name))
-            P2Score();
+            addPlayer2Score();
     }
 }
