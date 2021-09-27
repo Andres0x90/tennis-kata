@@ -23,13 +23,13 @@ public class TennisGame1 implements TennisGame {
         if (arePlayersTied())
             return getResponseTiedScore();
 
-        if (arePlayersInDeuce())
+        if (isThereAnyPlayerAboutToWin())
             return decideWinner();
 
         return getPreFinalResult();
     }
 
-    private boolean arePlayersInDeuce() {
+    private boolean isThereAnyPlayerAboutToWin() {
         return playerScore1>=4 || playerScore2>=4;
     }
 

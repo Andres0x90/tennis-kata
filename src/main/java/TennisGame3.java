@@ -24,10 +24,10 @@ public class TennisGame3 implements TennisGame {
     }
 
     private boolean isNormalSet() {
-        return !hasAnyPlayerWon() && !arePlayersInDeuce();
+        return !isThereAnyPlayerAboutToWin() && !arePlayersInDeuce();
     }
 
-    private boolean hasAnyPlayerWon() {
+    private boolean isThereAnyPlayerAboutToWin() {
         return playerScore1 >= 4 || playerScore2 >= 4;
     }
 
